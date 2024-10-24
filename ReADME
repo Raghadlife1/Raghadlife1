@@ -1,0 +1,83 @@
+Java Multi-Client Chat Application
+This project is a simple multi-client chat application built using Java sockets and multithreading. The server manages multiple clients, assigns them unique user IDs, and allows them to exchange real-time messages seamlessly.
+
+Features
+Multiple clients can connect to the server concurrently.
+Each client receives a unique user ID (e.g., User1, User2).
+Messages are broadcast to all connected clients except the sender.
+Prevents sending repeated messages.
+Supports continuous sending and receiving of messages in real time.
+How to Run the Application
+Prerequisites
+Ensure that Java Development Kit (JDK) (version 17 or higher) is installed.
+Use any IDE like IntelliJ IDEA, Eclipse, or VS Code for easy execution, or a terminal if preferred.
+Place ChatServer.java and ChatClient.java in the same project directory.
+Steps to Run the Application
+Compile the Code:
+
+Open a terminal or your IDE.
+
+Navigate to the directory containing ChatServer.java and ChatClient.java.
+
+Compile both files by running:
+
+javac ChatServer.java ChatClient.java
+Run the Server:
+
+Start the server by executing:
+
+
+java ChatServer
+The server will start listening on port 12345 and display:
+
+
+Welcome everyone to the chat application!
+The server has started on port 12345. Waiting for clients...
+Run the Clients:
+
+Open separate terminals or IDE windows to start clients. Run:
+
+
+java ChatClient
+Each client will connect to the server and receive a unique ID, displaying:
+
+
+Welcome to the chat room! Send your messages:
+Start Chatting:
+
+Clients can now send messages. The server will broadcast them to all connected clients except the sender.
+Example Run
+
+Server Output:
+
+Welcome everyone to the chat application!
+The server has started on port 12345. Waiting for clients...
+User1 has joined the chat.
+User2 has joined the chat.
+Message from User1: Hi Raghad,
+Message from User2: Hello Khalid, how are you?
+
+Client Output:
+
+Welcome to the chat room! Send your messages:
+Hi Raghad,
+Hello Khalid, how are you?
+Implementation Details
+Chat Server (ChatServer.java)
+ServerSocket listens for incoming connections on port 12345.
+Each client connection is managed in a separate thread to support concurrent messaging.
+ConcurrentHashMap stores client streams, enabling efficient message broadcasting.
+ClientHandler class handles individual client communication. When a message is received, it is broadcast to other clients.
+Chat Client (ChatClient.java)
+Each client connects to the server using a Socket.
+BufferedReader and PrintWriter manage input and output streams.
+The client runs a thread to continuously receive messages from the server.
+Prevents sending duplicate messages to the server.
+
+Dependencies
+Java SE Development Kit (JDK)
+Java Networking Libraries (bundled with JDK)
+
+Conclusion
+This project demonstrates the basics of socket programming and multithreading in Java by building a real-time chat application. The server efficiently handles multiple clients, and the chat experience is smooth. This project provides a practical understanding of Java networking concepts.
+
