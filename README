@@ -1,0 +1,57 @@
+README: Weather Information App
+
+Overview
+This Weather Information App allows users to retrieve real-time weather data for any city worldwide. It leverages the OpenWeatherMap API to provide current temperature, humidity, weather conditions, and more. The app is simple, user-friendly, and built using Java Swing for the graphical user interface, focusing on essential concepts like API integration and GUI development.
+
+Technical Requirements
+- Java Development Kit (JDK) 17 or later
+  - [Download JDK here](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
+- OpenWeatherMap API Key
+  - [Register for a free API key here](https://home.openweathermap.org/users/sign_up).
+- Internet connection
+  - A stable internet connection is required to fetch weather data from the API.
+
+Installation & Setup
+1. Clone the repository or download the project ZIP file.
+2. Open the project in any IDE (e.g., IntelliJ IDEA, Eclipse).
+3. Generate an API key from OpenWeatherMap and paste it into the relevant section of the code.
+4. Compile and run the project using your IDE or the terminal:
+   bash
+   javac WeatherApp.java
+   java WeatherApp
+   
+
+Usage
+1. Launch the application.
+2. Enter the name of a city in the search bar.
+3. Click the Get Weather button.
+4. The application will display the current weather information, including temperature, humidity, and a short weather description.
+5. To search for another city, repeat the process.
+
+Implementation Details
+- WeatherApp.java:  Main class to launch the application.
+- WeatherService.java:  Handles API requests and JSON parsing.
+- UIController.java: Manages the user interface and event handling using Java Swing.
+
+
+Troubleshooting
+
+If the application doesn’t retrieve weather data:
+- Verify your internet connection.
+- Make sure the API key is valid and correctly entered.
+- Check the spelling of the city name.
+
+
+Potential Improvements
+- Add support for multiple languages.
+- Implement a forecast feature to display weather for the next 7 days.
+- Provide error messages for invalid city names or network issues.
+
+Contributing
+We welcome contributions! Please fork the repository and submit a pull request with your improvements.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Special thanks to the OpenWeatherMap API for providing weather data.
